@@ -1,0 +1,47 @@
+[2021-05-21T19:10:33.723] [INFO] api - http://localhost:3000
+[2021-05-21T19:10:33.727] [INFO] api - { STATUS: 'Valid key' }
+[2021-05-21T19:10:34.252] [INFO] api - registerUser req:  http://localhost:3000/api/users/register { email: 'tul@gmail.com', password: '123456' }
+[2021-05-21T19:10:34.252] [INFO] api - registerUser res:  { data: { _id: 1621638634250, email: 'tul@gmail.com' } }
+[2021-05-21T19:10:34.791] [INFO] api - loginToken req:  http://localhost:3000/api/users/tokens { email: 'tul@gmail.com', password: '123456' }
+[2021-05-21T19:10:34.791] [INFO] api - loginToken res:  {
+  data: {
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE2MjE2Mzg2MzQyNTAsImlhdCI6MTYyMTYzODYzNH0._9cijr9xVcyWMnwk6NfreIn3fnaYyL6F0_a2dQW-GZ4'
+  }
+}
+[2021-05-21T19:10:34.796] [INFO] api - addNewGiftCard req:  http://localhost:3000/api/giftcards {
+  title: 'Amazon Gift Card',
+  vendor: 'Amazon',
+  amount: 1000,
+  year: 2021
+}
+[2021-05-21T19:10:34.796] [INFO] api - addNewGiftCard res:  {
+  data: {
+    _id: 'gqkb9wf4l22fl1kkq3fkw0evgwbuy7',
+    vendor: 'Amazon',
+    amount: 1000
+  }
+}
+[2021-05-21T19:10:34.799] [INFO] api - getGiftCards:  http://localhost:3000/api/giftcards
+[2021-05-21T19:10:34.799] [INFO] api - getGiftCards response {
+  data: [
+    {
+      _id: 'gqkb9wf4l22fl1kkq3fkw0evgwbuy7',
+      vendor: 'Amazon',
+      amount: 1000,
+      owner: 1621638634250
+    }
+  ]
+}
+[2021-05-21T19:10:34.802] [INFO] api - getSpecificGiftCard req:  http://localhost:3000/api/giftcards/gqkb9wf4l22fl1kkq3fkw0evgwbuy7
+[2021-05-21T19:10:34.803] [INFO] api - getSpecificGiftCard res:   {
+  data: {
+    _id: 'gqkb9wf4l22fl1kkq3fkw0evgwbuy7',
+    vendor: 'Amazon',
+    amount: 1000,
+    owner: 1621638634250
+  }
+}
+[2021-05-21T19:10:34.805] [INFO] api - deleteGiftCard:  http://localhost:3000/api/giftcards/gqkb9wf4l22fl1kkq3fkw0evgwbuy7
+[2021-05-21T19:10:34.805] [INFO] api - deleteGiftCard res:  {
+  data: { _id: 'gqkb9wf4l22fl1kkq3fkw0evgwbuy7', message: 'Delete Success' }
+}
