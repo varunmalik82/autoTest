@@ -1,4 +1,6 @@
 ### Set up
+This solution is tested only on mac machine due to inaccessibility of windows machine
+
 install the latest node js,
 Once you have downloaded or cloned the repo you need to install the dependencies for the API. We do this using `npm`.
 
@@ -8,10 +10,11 @@ npm install
 
 `Start the test-server`
 
-### Run the test suite
+### Run test suite
+Mocha style e2e test covers the whole workflow and hits all the services
 
 ```cli
-if OS is mac
+# mac machine
 npm test
 ```
 
@@ -24,8 +27,11 @@ npx mocha specs/e2eTest.js -g 'Validate Api Key' --reporter mochawesome
 Similar to above if you want to `Add New Gift Card` you need to supply the token which is required to be sent in header of the service
 
 ```cli
-token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE2MjEzMDc2NTgxODYsImlhdCI6MTYyMTMyMjY1OX0.JOist0Jx8wVxp5ubkNTH7vkjHXrOcxpbBXT7DIoZNUM' npx mocha specs/e2eTest.js -g 'Add New Gift Card' --reporter mochawesome	
+token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOjE2MjEzMDc2NTgxODYsImlhdCI6MTYyMTMyMjY1OX0.JOist0Jx8wVxp5ubkNTH7vkjHXrOcxpbBXT7DIoZNUM' npx mocha specs/e2eTest.js -g 'Add New Gift Card' --reporter mochawesome
 ```
+
+### Response/error validations
+Chai assertions used to validate the successful and error responses according to specification
 
 ### Report
 After first execution of `mochawesome` folder will created at the root of project with html/json reports. You can browse the html report from `mochawesome-report\mochawesome.html` in your favourite browser
