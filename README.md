@@ -8,7 +8,10 @@ Once you have downloaded or cloned the repo you need to install the dependencies
 npm install
 ```
 
-`Start the test-server`
+### Pre-req : Run Test-server
+download or clone the following repo and follow the instructions to initiate the test-server
+
+`https://github.com/varunmalik82/QA-test-server/tree/master/test-server`
 
 ### Run test suite
 Mocha style e2e test covers the whole workflow and hits all the services
